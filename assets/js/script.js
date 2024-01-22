@@ -168,8 +168,11 @@
     $(function() {
 		slopeADV.initialize();
 	});
-
+        
+    
+    
 })(jQuery);
+
 
 /* ============================================================ */
 /* PRELOADER
@@ -179,6 +182,9 @@ $(window).on('load', function() {
 });
     
 
+/* ============================================================ */
+/* Hero Section Image Slide Feature
+/* ============================================================ */
 function ImagesliderApp(el) {
     this.el = el;
 
@@ -186,7 +192,6 @@ function ImagesliderApp(el) {
     el.addEventListener("touchstart", updateSlider.bind(this));
     el.addEventListener("touchmove", updateSlider.bind(this));
 }
-
 function updateSlider(e) {
     var rightImageContainer = this.el.querySelector(".hero-wrapper");
     var {
@@ -201,14 +206,16 @@ function updateSlider(e) {
         this.el.querySelector(".handlebar_wrapper").style.left = `${position}%`;
     }
 }
-
 var hero = document.getElementById("hero-section");
+if (hero) {
+    setTimeout(function() {
+        ImagesliderApp(hero);
+    }, 1000);   
+}
 
-setTimeout(function() {
-    ImagesliderApp(hero);
-}, 1000);   
-
-
+/* ============================================================ */
+/* WOW JS
+/* ============================================================ */
 wow = new WOW({
     resetAnimation: true,
 });

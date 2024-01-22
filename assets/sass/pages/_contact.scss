@@ -1,0 +1,51 @@
+.contact_banner {
+    .section-title {
+        .title {
+            position: relative;
+            display: inline-block;
+            z-index: 1;
+            .icon {
+                position: absolute;
+                right: -1rem;
+                top: -3rem;
+                width: 10rem;
+                z-index: -1;
+
+                @include lg-up {
+                    width: 12rem;
+                    top: -4rem;
+                }
+                @include xl-up {
+                    width: 15rem;
+                    top: -5rem;
+                }
+            }
+        }
+    }
+}
+.contact-form {
+    padding-top: 2rem;
+    .form-group {
+        .form-control {
+            border: 0;
+            border-bottom: .1rem solid #000;
+            border-radius: 0;
+            padding: 1rem 0 .8rem;
+        }
+        & + .form-group {
+            margin-top: 3rem;
+        }
+    }
+    button {
+        background-color: var(--color__orange);
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        border: 0;
+        @include flex-center;
+
+        svg {
+            width: 3rem;
+        }
+    }
+}

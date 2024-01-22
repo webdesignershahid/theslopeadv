@@ -6,6 +6,9 @@ header {
     z-index: 1024;
     transition: all .3s ease;
     &.sticky {
+        background-color: var(--color__white);
+    }
+    &.home.sticky {
         background-color: #7ba3d5;
     }
     .navbar {
@@ -26,12 +29,12 @@ header {
         border: 0;
         width: 18rem ;
         padding: 1.5rem 2rem;
-
+        box-shadow: 0 0 1rem 0 rgba(#000,.1);
         li {
             a {
                 font-size: 1.8rem;
                 transition: all .2s ease;
-                font-family: 'Myriad Pro Bold';
+                font-family: var(--font__primary_semibold);
                 &.active , &:hover {
                     color: var(--color__orange);
                 }
@@ -55,5 +58,10 @@ header {
         @include md-up {
             padding: 1.5rem 4rem;
         }
+    }
+    .contact-btn {
+        background-color: var(--color__orange);
+        padding: 1.5rem 1.5rem 2rem 1.5rem;
+        border-radius: 50%;
     }
 }
